@@ -6,24 +6,30 @@ from io import BytesIO
 from PIL import Image
 from imageio import imwrite
 
+def resize_and_fix_origin(kernel, size):
+    """Pads a kernel to reach shape size, and shift it in order to cancel phase.
+    This is based on the assumption that the kernel is centered in image space.
+    """
+    pad0, pad1 = size[0]-kernel.shape[0], size[1]-kernel.shape[1]
+    # shift less if kernel is even, to start with 2 central items
+    shift0, shift1 = (kernel.shape[0]-1)//2, (kernel.shape[1]-1)//2
+
+    kernel = np.pad(kernel, ((0,pad0), (0,pad1)), mode='constant')
+    kernel = np.roll(kernel, (-shift0, -shift1), axis=(0,1))
+    return kernel
+
+def fast_convolution(image, kernel):
+
+    bfft = np.fft.fft2(image)
+    kfft = np.fft.fft2(resize_and_fix_origin(kernel, image.shape))
+    result = np.fft.ifft2(kfft*bfft).real
+    return result
+
 if __name__== '__main__':
     camera = picamera.PiCamera()
     camera.resolution = camera.MAX_RESOLUTION
     camera.start_preview(resolution=(410,313),fullscreen=False,window=(20,20,820,616))
     camera.exposure_mode = 'auto'
-            
-    # for i in range(1):
-    #     customize = input('Change shutter speed? (y/[n])')
-    #     if customize == 'y':
-    #         speed = int(input('shutter speed (mus) : '))
-    #         camera.shutter_speed = speed 
-    #     input('Press enter to take picture ')
-    #     stream = picamera.array.PiBayerArray(camera)
-    #     camera.capture(stream, 'jpeg', bayer=True)
-    #     filename = input('Name of file: ')
-    #     arr = np.sum(stream.array,axis=2).astype(np.uint8)
-    #     img = Image.fromarray(arr)
-    #     img.save(filename)
 
     for i in range(1):
         "using BytesIO"
@@ -34,6 +40,12 @@ if __name__== '__main__':
         arr = np.array(image)
         plt.figure()
         plt.imshow(arr)
+
+        arr_grey = np.sum(arr, axis=2)
+        corr = fast_convolution(arr_grey, arr_grey.conj())
+        plt.figure()
+        plt.imshow(corr, cmap='viridis')
+        plt.colorbar()
 
         # image.save("test.jpg")
         
