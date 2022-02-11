@@ -23,3 +23,5 @@ if __name__== '__main__':
         # img.save(filename)
 
         input("Press Enter to stop")
+
+        print("hello world")
