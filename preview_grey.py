@@ -1,3 +1,4 @@
+from time import sleep
 import picamera
 import picamera.array
 import numpy as np
@@ -13,5 +14,9 @@ if __name__== '__main__':
     for i in range(1):
         stream = picamera.array.PiBayerArray(camera)
         camera.capture(stream, 'jpeg', bayer=True)
+        #I added this next 2 lines to get a photo after 5 seconds
+        sleep(5)
+        camera.capture('/home/pi/Documents/diffusercam/saved_images/pic0003.jpg')
 
         input("Press Enter to stop")
+

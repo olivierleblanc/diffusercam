@@ -28,7 +28,7 @@ def fast_convolution(image, kernel):
 if __name__== '__main__':
     camera = picamera.PiCamera()
     camera.resolution = camera.MAX_RESOLUTION
-    camera.start_preview(resolution=(410,313),fullscreen=False,window=(20,20,820,616))
+    # camera.start_preview(resolution=(410,313),fullscreen=False,window=(20,20,820,616))
     camera.exposure_mode = 'auto'
 
     for i in range(1):
@@ -70,6 +70,7 @@ if __name__== '__main__':
         # imwrite('test.jpg', arr)
         # img = Image.fromarray(arr)
         # img.save('test.jpg')
-    camera.stop_preview()
+        
+    # camera.stop_preview()
     plt.show()
 
