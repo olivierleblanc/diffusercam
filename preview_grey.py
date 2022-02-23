@@ -16,7 +16,7 @@ if __name__== '__main__':
         camera.capture(stream, 'jpeg', bayer=True)
         #I added this next 2 lines to get a photo after 5 seconds
         sleep(5)
-        camera.capture('/home/pi/Documents/diffusercam/saved_images/pic0003.jpg')
+        camera.capture('/home/pi/Documents/diffusercam/saved_images/h_0001.jpg')
 
         input("Press Enter to stop")
 
