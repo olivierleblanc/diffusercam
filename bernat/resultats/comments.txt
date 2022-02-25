@@ -1,0 +1,15 @@
+optim001
+optim002
+optim003
+optim004
+optim005
+optim006
+optim007: with captures with correctly positioned LEDs. Factor:4. Mode:same
+optim008: with captures with correctly positioned LEDs. Factor:4. Mode:valid
+optim009: with captures with correctly positioned LEDs. Factor:4. Mode:full
+optim010: collage with the previous 3
+flip001: PSF'
+optim011: simulation generated 2 focus. Conv. mode: same
+optim012: simulation generated 2 focus. Conv. mode: full
+optim013: simulation generated 2 focus. Conv. mode: valid
+optim014: collage with the previous 3
