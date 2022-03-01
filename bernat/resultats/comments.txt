@@ -13,3 +13,4 @@ optim011: simulation generated 2 focus. Conv. mode: same
 optim012: simulation generated 2 focus. Conv. mode: full
 optim013: simulation generated 2 focus. Conv. mode: valid
 optim014: collage with the previous 3
+convolution001: related to autocorrelation02b.ipynb
