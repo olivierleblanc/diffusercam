@@ -12,8 +12,8 @@ if __name__== '__main__':
     camera.start_preview(resolution=(410,313),fullscreen=False,window=(20,20,820,616))
     camera.exposure_mode = 'auto'
     
-    sleep(2)
-    camera.capture('/home/pi/Documents/diffusercam/saved_images/test01/t2d55.png', 'png')
+    sleep(20)
+    camera.capture('/home/pi/Documents/diffusercam/saved_images/test01/999.png', 'png')
     camera.stop_preview()
 
     # for i in range(1):
