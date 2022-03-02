@@ -14,3 +14,6 @@ optim012: simulation generated 2 focus. Conv. mode: full
 optim013: simulation generated 2 focus. Conv. mode: valid
 optim014: collage with the previous 3
 convolution001: related to autocorrelation02b.ipynb
+optim015.png: two real leds with h = h - h.mean()
+optim016.png: two real leds with h = h - h.mean()
+optim017.png: two real leds with h = h - h.mean()
