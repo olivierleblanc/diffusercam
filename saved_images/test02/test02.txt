@@ -1,0 +1,11 @@
+The files generated are:
+
+background: nothing, only darkness.
+depth_030: one single led centered at 30cm
+depth_040: one single led centered at 40cm
+depth_050: one single led centered at 50cm
+depth_060: one single led centered at 60cm
+depth_070: one single led centered at 70cm
+depth_080: one single led centered at 80cm
+depth_090: one single led centered at 90cm
+depth_100: one single led centered at 1m
