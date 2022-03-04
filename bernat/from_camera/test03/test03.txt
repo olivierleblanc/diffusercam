@@ -1,0 +1,6 @@
+Test 03
+With the camera fixed in placed, we will move the tape and
+we will compute the autocorrelation to determine the best distance.
+
+
+dist_00000
