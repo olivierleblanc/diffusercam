@@ -1,2 +1,0 @@
-Test 04: Continuation of Test03. Now, we will start with a dist_00200
-that is 0.2 cm (2 mm) between the tape and the camera.

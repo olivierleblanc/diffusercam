@@ -1,0 +1,3 @@
+Test05
+Some captures from diferent shapes displayed on a screen.
+See Test06 for a better version of test05.
