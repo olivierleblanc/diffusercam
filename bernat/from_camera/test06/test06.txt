@@ -2,8 +2,8 @@ Test06
 Some captures from diferent shapes displayed on a screen. A set of 25 images in PNG format.
 
 Conditions:
-The screen is XX m w.r.t. the camera.
-The tape is XX mm w.r.t. the camera.
+The screen is 0.9 m w.r.t. the camera.
+The tape is 2 mm w.r.t. the camera.
 
 Images:
 Type a: From phone
@@ -31,10 +31,6 @@ c_blackX (1 to 0): 10 captures of a black frame
 c_whiteX (1 to 0): 10 captures of a white frame
 c_dotcenter: Dot in the center
 c_bigdotcenter: Big dot in the center
-c_dottopleft: Dot in topleft
-c_dottopright: Dot in topright
-c_dotbottomleft: Dot in bottomleft
-c_dotbottomright: Dot in bottomright
 c_horitzontal: Horitzontal Line*
 c_vertical: Vertical Line*
 c_diagonal1: Diagonal Line* (TopLeft to BottomRight)

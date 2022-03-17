@@ -13,10 +13,7 @@ if __name__== '__main__':
     camera.exposure_mode = 'auto'
     
     sleep(2)
-    # camera.capture('/home/pi/Documents/diffusercam/saved_images/test04/dist_1000.png', 'png')
-
-
-    camera.capture('/home/pi/Documents/diffusercam/saved_images/test05/1.png', 'png')
+    camera.capture('/home/pi/Documents/diffusercam/bernat/from_camera/test06/d.png', 'png')
     camera.stop_preview()
 
     # for i in range(1):
@@ -28,4 +25,3 @@ if __name__== '__main__':
     #     # camera.capture('/home/pi/Documents/diffusercam/saved_images/test01/t1d0.png')
 
     #     input("Press Enter to stop")
-
