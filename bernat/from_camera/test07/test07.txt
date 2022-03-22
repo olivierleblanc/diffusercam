@@ -1,0 +1,3 @@
+Test07
+We measure an hexagon of disks to determine the screenratio
+(with the old no-isontropic tape)
