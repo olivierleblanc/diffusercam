@@ -1,26 +1,38 @@
+# import matplotlib.pyplot as plt
+# import matplotlib.image as mpimg
+# import numpy as np
+# import math
+# from skimage import draw
+# from scipy import signal
+# from PIL import Image
+
+
 import matplotlib.pyplot as plt
-import matplotlib.image as mpimg
 import numpy as np
+import scipy.stats as stats
 import math
-from skimage import draw
-from scipy import signal
-from PIL import Image
 
 
-sy=10
-sx=15
-max_y=4
-max_x=4
-radi=2
+x = np.linspace(-40,40, 40)
+new_x = np.array([[]],dtype=float)
+for i in range(40):
+    new_x = np.append(new_x,[[stats.norm.pdf(x, 0,10)[i]]],axis = 1)
 
-disk_mask = np.ones((sy, sx), dtype=float)
-rr = np.array([max_y-1, max_y-1, max_y-1, max_y, max_y, max_y, max_y+1, max_y+1, max_y+1])
-cc = np.array([max_x-1, max_x, max_x+1, max_x-1, max_x, max_x+1, max_x-1, max_x, max_x+1])
-disk_mask[rr, cc] = 0
-
-plt.imshow(disk_mask,cmap='gray')
-plt.grid()
+plt.imshow(new_x)
 plt.show()
+plt.plot(range(40),new_x[0,:])
+plt.show()
+print(new_x)
 
-# rr = np.array([m])
-print(rr, cc)
+# mu = 0
+# sigma = 100
+# x = np.linspace(mu - 3*sigma, mu + 3*sigma, 40)
+# new_x = np.array([[]],dtype=float)
+# for i in range(40):
+#     new_x = np.append(new_x,[[stats.norm.pdf(x, mu, sigma)[i]]],axis = 1)
+
+# plt.imshow(new_x)
+# plt.show()
+# plt.plot(range(40),new_x[0,:])
+# plt.show()
+# print(new_x)
