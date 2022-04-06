@@ -1,0 +1,1 @@
+test12: Hexagon of disks with 20 captures per image
