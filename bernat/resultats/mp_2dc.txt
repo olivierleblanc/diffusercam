@@ -1,0 +1,4 @@
+T_MP = 71 min
+s = 200
+L0 = 450
+np.sum(np.abs(a_GT-a)) = 43,5
