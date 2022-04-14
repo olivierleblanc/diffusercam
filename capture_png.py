@@ -13,15 +13,15 @@ if __name__== '__main__':
     camera.exposure_mode = 'auto'
     
     sleep(2)
-    camera.capture('/home/pi/Documents/diffusercam/bernat/from_camera/test14/h_b.png', 'png')
+    camera.capture('/home/pi/Documents/diffusercam/bernat/from_camera/test15/h_b.png', 'png')
 
 
 
     # for k in range(0,20):
-    #     name='/home/pi/Documents/diffusercam/bernat/from_camera/test14/alpha'+str(k)+'.png'
-    #     print(k*5,'%')
-    #     # sleep(2)
-    #     camera.capture(name, 'png')
+        # name='/home/pi/Documents/diffusercam/bernat/from_camera/test15/gray'+str(k)+'.png'
+        # print(k*5,'%')
+        # sleep(2)
+        # camera.capture(name, 'png')
 
     camera.stop_preview()
 
