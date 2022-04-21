@@ -13,7 +13,7 @@ if __name__== '__main__':
     camera.exposure_mode = 'auto'
     
     sleep(2)
-    camera.capture('/home/pi/Documents/diffusercam/bernat/from_camera/test15/h_b.png', 'png')
+    camera.capture('/home/pi/Documents/diffusercam/bernat/from_camera/light_clean.png', 'png')
 
 
 
