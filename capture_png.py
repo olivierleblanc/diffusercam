@@ -18,7 +18,7 @@ if __name__== '__main__':
 
 
     for k in range(0,20):
-        name='/home/pi/Documents/diffusercam/bernat/from_camera/test16/backlight'+str(k)+'.png'
+        name='/home/pi/Documents/diffusercam/bernat/from_camera/test17/backlight'+str(k)+'.png'
         print(k*5,'%')
         # sleep(2)
         camera.capture(name, 'png')
